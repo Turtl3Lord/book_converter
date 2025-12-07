@@ -1,0 +1,8 @@
+docker rm -f calibre-ssh 2>$null
+
+docker run -it `
+  --name calibre-ssh `
+  -p 2222:22 `
+  -v "D:\Projects\File_Converter\Books\Converted_Books:/converted_books" `
+  -v "D:\Projects\File_Converter\Books\Origin_Books:/origin_books" `
+  calibre-ssh
